@@ -8,7 +8,7 @@ export default function Home() {
         <p>
          Welcome to my page! &nbsp;
         </p>
-        <a href="../public/Melissa_Lee_Resume.pdf">Resume</a>
+        <a href="Melissa_Lee_Resume.pdf">Resume</a>
       </div>
 
       <div className={styles.center}>
