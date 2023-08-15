@@ -2,8 +2,6 @@ To view Vercel production build:
 
 Open [https://melissaflee02-github-g1fkocpgl-melissaflee02.vercel.app/](https://melissaflee02-github-g1fkocpgl-melissaflee02.vercel.app/)
 
-Open [http://localhost:3000](http://localhost:3000)
-
 To run locally:
 
 ```bash
