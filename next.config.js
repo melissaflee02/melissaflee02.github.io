@@ -2,7 +2,7 @@
 
 const isProd = process.env.NODE_ENV === 'production'
 
-const nextConfig = {}
+let nextConfig = {}
 
 if (isProd) {
     nextConfig = {
