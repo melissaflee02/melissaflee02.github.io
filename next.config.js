@@ -6,7 +6,7 @@ let nextConfig = {}
 
 if (isProd) {
     nextConfig = {
-        basePath: ".",
+        basePath: "/my-app",
     }
 }
 
