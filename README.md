@@ -1,6 +1,6 @@
 To view Vercel production build:
 
-Open [https://melissaflee02-github-g1fkocpgl-melissaflee02.vercel.app/](https://melissaflee02-github-g1fkocpgl-melissaflee02.vercel.app/)
+----CLICK HERE----> [https://melissaflee02-github-g1fkocpgl-melissaflee02.vercel.app/](https://melissaflee02-github-g1fkocpgl-melissaflee02.vercel.app/) <----
 
 To run locally:
 
