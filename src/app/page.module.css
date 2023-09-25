@@ -41,7 +41,7 @@
   margin: 0;
   padding: 1rem 4rem;
   background-color: rgba(var(--callout-rgb), 0.5);
-  border: 1px solid rgba(var(--resume-border-rgb), 0.5);
+  border: 1px solid rgba(var(--callout-border-rgb), 0.5);
   border-radius: var(--border-radius);
 }
 
@@ -179,9 +179,9 @@
     font-size: 0.8rem;
   }
 
-  .description a {
+  /* .description a {
     padding: 1rem;
-  }
+  } */
 
   .description p,
   .description div {
