@@ -1,4 +1,6 @@
 ---
+import { site } from "../data/site";
+
 const links = [
   { label: "About", href: "#about" },
   { label: "Experience", href: "#experience" },
@@ -7,24 +9,82 @@ const links = [
 ];
 ---
 
-<header class="sticky top-0 z-50 border-b border-ink/15 bg-cream/95 backdrop-blur">
-  <nav class="mx-auto flex max-w-3xl items-center justify-between px-6 py-5">
-    <a href="#top" class="font-display text-lg font-medium italic tracking-tight text-rust-dark">
-      Melissa Lee
+<header class="sticky top-0 z-50 border-b border-ink/15 bg-canvas/95 backdrop-blur">
+  <nav
+    aria-label="Primary"
+    class="mx-auto flex max-w-3xl items-center justify-between px-6 py-5"
+  >
+    <a
+      href="#top"
+      class="font-display text-lg font-medium italic tracking-tight text-accent-muted"
+    >
+      {site.name}
     </a>
-    <ul class="flex gap-5 text-sm font-semibold uppercase tracking-wide sm:gap-8">
-      {
-        links.map((link) => (
-          <li>
-            <a
-              href={link.href}
-              class="text-ink/70 transition hover:text-rust-dark"
-            >
-              {link.label}
-            </a>
-          </li>
-        ))
-      }
+
+    <button
+      type="button"
+      id="nav-toggle"
+      aria-controls="nav-menu"
+      aria-expanded="false"
+      aria-label="Open navigation menu"
+      class="text-ink/70 transition hover:text-accent sm:hidden"
+    >
+      <svg
+        aria-hidden="true"
+        viewBox="0 0 24 24"
+        class="h-6 w-6"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.75"
+        stroke-linecap="round"
+      >
+        <path d="M4 7h16M4 12h16M4 17h16" />
+      </svg>
+    </button>
+
+    <ul
+      id="nav-menu"
+      class="absolute inset-x-0 top-full hidden flex-col gap-4 border-b border-ink/15 bg-canvas px-6 pb-6 text-sm font-semibold uppercase tracking-wide sm:static sm:flex sm:flex-row sm:gap-8 sm:border-0 sm:p-0"
+    >
+      {links.map((link) => (
+        <li>
+          <a
+            href={link.href}
+            class="block py-1 text-ink/70 transition hover:text-accent"
+          >
+            {link.label}
+          </a>
+        </li>
+      ))}
     </ul>
   </nav>
 </header>
+
+<script>
+  const toggle = document.getElementById("nav-toggle");
+  const menu = document.getElementById("nav-menu");
+
+  if (toggle && menu) {
+    const setOpen = (open: boolean) => {
+      menu.classList.toggle("hidden", !open);
+      menu.classList.toggle("flex", open);
+      toggle.setAttribute("aria-expanded", String(open));
+      toggle.setAttribute(
+        "aria-label",
+        open ? "Close navigation menu" : "Open navigation menu",
+      );
+    };
+
+    toggle.addEventListener("click", () => {
+      setOpen(toggle.getAttribute("aria-expanded") !== "true");
+    });
+
+    menu.addEventListener("click", (event) => {
+      if (event.target instanceof HTMLAnchorElement) setOpen(false);
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") setOpen(false);
+    });
+  }
+</script>

@@ -3,7 +3,6 @@ export interface Experience {
   org: string;
   orgUrl: string;
   period: string;
-  accent: "rust" | "olive" | "mustard";
   bullets: string[];
 }
 
@@ -13,7 +12,6 @@ export const experience: Experience[] = [
     org: "Pinterest",
     orgUrl: "https://www.pinterest.com/",
     period: "Current",
-    accent: "olive",
     bullets: [
       "Working on backend infrastructure that powers Pinterest at scale.",
     ],
@@ -23,7 +21,6 @@ export const experience: Experience[] = [
     org: "Riot Games",
     orgUrl: "https://www.riotgames.com/en",
     period: "Summer Internship",
-    accent: "rust",
     bullets: [
       "Architected and implemented an end-to-end match simulation framework used by teams across League of Legends, Valorant, and R&D to iteratively test and optimize matchmaking algorithms.",
       "Integrated an industry-leading BERT NLP model into Riot's name-checking pipeline, improving offensive name detection by 50%.",
@@ -34,7 +31,6 @@ export const experience: Experience[] = [
     org: "Stanford University",
     orgUrl: "https://www.stanford.edu/",
     period: "Artificial Intelligence & Computer Systems",
-    accent: "mustard",
     bullets: [
       "Pursuing a dual Bachelor's and Master's degree with concentrations in AI and Computer Systems.",
     ],
