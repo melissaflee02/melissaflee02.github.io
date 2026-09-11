@@ -26,7 +26,7 @@ import { projects } from "../data/projects";
               ))}
             </ul>
             <span class="mt-4 text-sm font-semibold text-accent-muted">
-              View on GitHub &rarr;
+              {project.linkLabel ?? "View on GitHub"} &rarr;
               <span class="sr-only">({project.name})</span>
             </span>
           </a>

@@ -3,9 +3,19 @@ export interface Project {
   description: string;
   tags: string[];
   href: string;
+  /** Call-to-action label; defaults to "View on GitHub". */
+  linkLabel?: string;
 }
 
 export const projects: Project[] = [
+  {
+    name: "Deck & Table",
+    description:
+      "Clear, printable rules for 15 classic card games — setup, scoring, house rules, and cheat sheets. A dependency-free static site built for fast, distraction-free reading at the table.",
+    tags: ["Static Site", "JavaScript", "SEO"],
+    href: "https://deckandtable.com/",
+    linkLabel: "Visit deckandtable.com",
+  },
   {
     name: "Oovoo",
     description:
