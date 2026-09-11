@@ -32,7 +32,7 @@ export const experience: Experience[] = [
     orgUrl: "https://www.stanford.edu/",
     period: "Artificial Intelligence & Computer Systems",
     bullets: [
-      "Pursuing a dual Bachelor's and Master's degree with concentrations in AI and Computer Systems.",
+      "Earned a dual Bachelor's and Master's degree with concentrations in AI and Computer Systems.",
     ],
   },
 ];
