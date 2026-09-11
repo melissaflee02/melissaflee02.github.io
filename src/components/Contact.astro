@@ -1,0 +1,52 @@
+---
+const links = [
+  {
+    label: "Email",
+    href: "mailto:melissaflee02@gmail.com",
+    accent: "text-rust-dark decoration-rust/50 hover:decoration-rust",
+  },
+  {
+    label: "LinkedIn",
+    href: "https://www.linkedin.com/in/melissaflee02/",
+    accent: "text-olive-dark decoration-olive/50 hover:decoration-olive",
+  },
+  {
+    label: "GitHub",
+    href: "https://github.com/melissaflee02",
+    accent: "text-ink decoration-ink/40 hover:decoration-ink",
+  },
+  {
+    label: "Resume",
+    href: "/Melissa_Lee_Resume.pdf",
+    accent: "text-mustard-dark decoration-mustard/50 hover:decoration-mustard",
+  },
+];
+---
+
+<section id="contact" class="px-6 py-16">
+  <div class="mx-auto max-w-2xl border-t border-ink/15 pt-14 text-center">
+    <h2 class="font-display text-3xl italic text-rust-dark">Let's connect</h2>
+    <p class="mx-auto mt-3 max-w-md text-ink/75">
+      Whether it's about engineering, AI, or women's wrestling — my inbox is
+      always open.
+    </p>
+    <div class="mt-8 flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-base font-semibold">
+      {
+        links.map((link) => (
+          <a
+            href={link.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            class={`underline underline-offset-4 transition ${link.accent}`}
+          >
+            {link.label}
+          </a>
+        ))
+      }
+    </div>
+  </div>
+</section>
+
+<footer class="px-6 py-10 text-center text-sm text-ink/50">
+  Built with Astro + Tailwind &middot; &copy; {new Date().getFullYear()} Melissa Lee
+</footer>

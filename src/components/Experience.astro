@@ -1,0 +1,44 @@
+---
+import { experience } from "../data/experience";
+
+const accentText = {
+  rust: "text-rust-dark",
+  olive: "text-olive-dark",
+  mustard: "text-mustard-dark",
+} as const;
+---
+
+<section id="experience" class="px-6 py-16">
+  <div class="mx-auto max-w-2xl">
+    <h2 class="font-display text-3xl italic text-rust-dark">Experience</h2>
+    <ol class="mt-8 divide-y divide-ink/15 border-t border-ink/15">
+      {
+        experience.map((item) => (
+          <li class="grid gap-1 py-6 sm:grid-cols-[1fr_2fr] sm:gap-8">
+            <div>
+              <p class={`text-sm font-semibold uppercase tracking-wide ${accentText[item.accent]}`}>
+                {item.period}
+              </p>
+            </div>
+            <div>
+              <h3 class="font-display text-xl">
+                {item.role} &middot;{" "}
+                <a
+                  href={item.orgUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="italic underline decoration-ink/30 underline-offset-2 hover:decoration-ink"
+                >
+                  {item.org}
+                </a>
+              </h3>
+              <ul class="mt-2 list-disc space-y-1.5 pl-5 text-ink/75">
+                {item.bullets.map((bullet) => <li>{bullet}</li>)}
+              </ul>
+            </div>
+          </li>
+        ))
+      }
+    </ol>
+  </div>
+</section>

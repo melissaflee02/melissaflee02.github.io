@@ -1,0 +1,51 @@
+---
+import { projects } from "../data/projects";
+
+const accentBorder = {
+  rust: "border-t-rust",
+  olive: "border-t-olive",
+  mustard: "border-t-mustard",
+} as const;
+
+const accentText = {
+  rust: "text-rust-dark",
+  olive: "text-olive-dark",
+  mustard: "text-mustard-dark",
+} as const;
+---
+
+<section id="projects" class="px-6 py-16">
+  <div class="mx-auto max-w-4xl">
+    <h2 class="font-display text-3xl italic text-rust-dark">Projects</h2>
+    <div class="mt-8 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+      {
+        projects.map((project) => (
+          <a
+            href={project.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            class={`group flex flex-col border-t-2 bg-paper p-5 transition hover:bg-cream ${accentBorder[project.accent]}`}
+          >
+            <h3 class="font-display text-xl group-hover:italic">
+              {project.name}
+            </h3>
+            <p class="mt-2 flex-1 text-sm leading-relaxed text-ink/75">
+              {project.description}
+            </p>
+            <div class="mt-4 flex flex-wrap gap-x-3 gap-y-1 text-xs font-semibold uppercase tracking-wide text-ink/50">
+              {project.tags.map((tag, i) => (
+                <span>
+                  {i > 0 && <span class="mr-3 text-ink/30">&middot;</span>}
+                  {tag}
+                </span>
+              ))}
+            </div>
+            <span class={`mt-4 text-sm font-semibold ${accentText[project.accent]}`}>
+              View on GitHub &rarr;
+            </span>
+          </a>
+        ))
+      }
+    </div>
+  </div>
+</section>

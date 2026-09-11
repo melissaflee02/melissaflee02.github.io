@@ -1,0 +1,22 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Fraunces", "Iowan Old Style", Georgia, serif;
+  --font-body: "Source Sans 3", ui-sans-serif, system-ui, sans-serif;
+
+  --color-cream: #000000;
+  --color-paper: #0f0f0f;
+  --color-ink: #f4f4f0;
+
+  --color-rust: #ffffff;
+  --color-rust-dark: #e2e2dc;
+  --color-mustard: #ffffff;
+  --color-mustard-dark: #e2e2dc;
+  --color-olive: #ffffff;
+  --color-olive-dark: #e2e2dc;
+  --color-clay: #ffffff;
+}
+
+html {
+  scroll-behavior: smooth;
+}
