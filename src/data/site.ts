@@ -1,13 +1,13 @@
 export const site = {
   name: "Melissa Lee",
-  role: "Software Engineer",
-  tagline: "Software Engineer · Stanford CS + AI",
+  role: "Software Engineer II",
+  tagline: "Software Engineer II · Stanford CS + AI",
   description:
-    "Melissa Lee is a software engineer at Pinterest and a Stanford CS grad (AI & Computer Systems), building backend systems and independent projects.",
-  email: "melissaflee02@gmail.com",
+    "Melissa Lee is a software engineer at Pinterest and a Stanford CS grad (AI concentration), building ML safety, ranking, and experimentation systems.",
+  email: "melissa.f.lee02@gmail.com",
   ogImage: "/og.png",
   links: {
-    email: "mailto:melissaflee02@gmail.com",
+    email: "mailto:melissa.f.lee02@gmail.com",
     linkedin: "https://www.linkedin.com/in/melissaflee02/",
     github: "https://github.com/melissaflee02",
     resume: "/Melissa_Lee_Resume.pdf",

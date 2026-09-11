@@ -35,8 +35,8 @@
 
 - Tailwind v4 with custom theme in `src/styles/global.css` under `@theme`.
 - Use the semantic tokens: `bg-canvas`, `bg-surface`, `text-ink`, `text-accent`,
-  `text-accent-muted`, `font-display`, `font-body`. The site is monochrome dark;
-  there are no per-item accent colors.
+  `text-accent-muted`, `font-display`, `font-body`. The palette is deep navy with a
+  single gold accent; there are no per-item accent colors.
 - Add new colors only under `@theme` in `global.css`; do not add new fonts without approval.
 - External links must include `target="_blank" rel="noopener noreferrer"`.
 

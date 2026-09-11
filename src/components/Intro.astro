@@ -1,0 +1,111 @@
+---
+---
+
+<div id="intro" aria-hidden="true" hidden>
+  <svg class="intro-mark" viewBox="0 0 200 120" role="presentation">
+    <text
+      x="100"
+      y="82"
+      text-anchor="middle"
+      font-family="'Playfair Display', Georgia, serif"
+      font-size="76"
+      font-style="italic"
+      class="intro-letters"
+    >
+      ML
+    </text>
+  </svg>
+</div>
+
+<style>
+  @property --intro-radius {
+    syntax: "<length-percentage>";
+    inherits: false;
+    initial-value: 0px;
+  }
+
+  #intro {
+    position: fixed;
+    inset: 0;
+    z-index: 200;
+    pointer-events: none;
+    background: var(--color-canvas);
+    --intro-radius: 0px;
+    mask-image: radial-gradient(
+      circle at 50% 50%,
+      transparent 0 var(--intro-radius),
+      #000 var(--intro-radius)
+    );
+    animation:
+      intro-iris 900ms cubic-bezier(0.65, 0, 0.35, 1) 1500ms forwards,
+      intro-clear 250ms ease-in 2250ms forwards;
+  }
+
+  .intro-mark {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: min(340px, 60vw);
+    translate: -50% -50%;
+  }
+
+  .intro-letters {
+    fill: none;
+    stroke: var(--color-accent);
+    stroke-width: 1.1;
+    stroke-dasharray: 900;
+    stroke-dashoffset: 900;
+    letter-spacing: 0.06em;
+    animation:
+      intro-draw 1100ms ease-out forwards,
+      intro-fill 400ms ease-out 1000ms forwards,
+      intro-fade 350ms ease-in 1400ms forwards;
+  }
+
+  @keyframes intro-draw {
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+
+  @keyframes intro-fill {
+    to {
+      fill: var(--color-accent);
+    }
+  }
+
+  @keyframes intro-fade {
+    to {
+      opacity: 0;
+    }
+  }
+
+  @keyframes intro-iris {
+    to {
+      --intro-radius: 150vmax;
+    }
+  }
+
+  /* Fallback for browsers without @property, where the iris cannot animate. */
+  @keyframes intro-clear {
+    to {
+      opacity: 0;
+    }
+  }
+</style>
+
+<script>
+  const intro = document.getElementById("intro");
+  const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const seen = sessionStorage.getItem("intro-seen") === "1";
+
+  if (intro && !reduced && !seen) {
+    intro.hidden = false;
+    document.documentElement.classList.add("intro-running");
+    sessionStorage.setItem("intro-seen", "1");
+    window.setTimeout(() => {
+      intro.remove();
+      document.documentElement.classList.remove("intro-running");
+    }, 2500);
+  }
+</script>
