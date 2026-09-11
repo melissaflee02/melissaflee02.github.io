@@ -15,6 +15,10 @@ html {
   scroll-behavior: smooth;
 }
 
+html.intro-running {
+  overflow: hidden;
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
