@@ -4,19 +4,32 @@
   --font-display: "Fraunces", "Iowan Old Style", Georgia, serif;
   --font-body: "Source Sans 3", ui-sans-serif, system-ui, sans-serif;
 
-  --color-cream: #000000;
-  --color-paper: #0f0f0f;
+  --color-canvas: #000000;
+  --color-surface: #0f0f0f;
   --color-ink: #f4f4f0;
-
-  --color-rust: #ffffff;
-  --color-rust-dark: #e2e2dc;
-  --color-mustard: #ffffff;
-  --color-mustard-dark: #e2e2dc;
-  --color-olive: #ffffff;
-  --color-olive-dark: #e2e2dc;
-  --color-clay: #ffffff;
+  --color-accent: #ffffff;
+  --color-accent-muted: #e2e2dc;
 }
 
 html {
   scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
 }
