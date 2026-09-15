@@ -11,14 +11,14 @@ export const projects: Project[] = [
   {
     name: "Oovoo",
     description:
-      "A social ridesharing platform for Stanford communities. Users join communities, post trips, and register as drivers or riders — replacing messy spreadsheets with a simple, intuitive mobile app. 2024 Stanford Senior Capstone Project.",
+      "A mobile app that replaces carpool spreadsheets for Stanford communities: post a trip, join as a driver or rider, and see who you're traveling with. Built as my 2024 Senior Capstone.",
     tags: ["React Native", "Expo", "Capstone"],
     href: "https://github.com/melissaflee02/oovoo",
   },
   {
     name: "Deck & Table",
     description:
-      "Clear, printable rules for 15 classic card games — setup, scoring, house rules, and cheat sheets. A dependency-free static site built for fast, distraction-free reading at the table.",
+      "Printable rules, scoring, and cheat sheets for 15 classic card games. A dependency-free static site designed for quick, distraction-free reading at the table.",
     tags: ["Static Site", "JavaScript", "SEO"],
     href: "https://deckandtable.com/",
     linkLabel: "Visit deckandtable.com",
@@ -26,7 +26,7 @@ export const projects: Project[] = [
   {
     name: "This Website",
     description:
-      "My personal site, built with Astro and Tailwind CSS — a minimal, editorial home for my work and interests.",
+      "This site: a minimal, editorial home for my work, built with Astro and Tailwind CSS and deployed on GitHub Pages.",
     tags: ["Astro", "Tailwind CSS", "TypeScript"],
     href: "https://github.com/melissaflee02/melissaflee02.github.io",
   },
