@@ -13,9 +13,11 @@ export const experience: Experience[] = [
     orgUrl: "https://www.pinterest.com/",
     period: "Sept 2024 — Present",
     bullets: [
-      "Owned the production rollout of Pinterest's first context-aware safety filter across Homefeed, Search, and related surfaces, reducing filtration errors for minors and new users from 8.7% to 3.86%.",
-      "Built a real-time experimentation framework now used by 15+ ML engineers, cutting launch time from 7+ days to 2–3 days across 9+ experiments, and drove adoption across four partner teams as Content Quality's experimentation SME.",
-      "Migrated core content ranking from batch pipelines to online inference, cutting data staleness from 2–3 days to one day, and launched an ML shoppability signal for 600M+ monthly users that lifted shopping pin impressions by 55%.",
+      "Owned the time-critical production rollout of Pinterest's first context-aware safety filter across Homefeed, Search, and related surfaces, reducing filtration errors by 56% (8.7% to 3.86%) for minors and new users.",
+      "Resolved launch bottlenecks for 15+ ML engineers by building an extensible real-time experimentation framework, cutting launch time from 7+ days to 2–3 days across 9+ experiments.",
+      "Drove framework adoption across four partner teams as Content Quality's experimentation SME, delivering hands-on demos, writing end-to-end integration runbooks, and diagnosing production issues.",
+      "Built serving infrastructure and APIs to migrate core content ranking from batch pipelines to online inference, cutting data staleness from 2–3 days to one day and user preference update latency from days to hours.",
+      "Launched an ML shoppability signal for 600M+ monthly users, lifting shopping pin impressions 55% and repins 47%.",
     ],
   },
   {
