@@ -3,7 +3,7 @@ export const site = {
   role: "Software Engineer II",
   tagline: "Software Engineer II · Backend & ML Infrastructure",
   description:
-    "Melissa Lee is a software engineer at Pinterest who works on the backend and ML infrastructure behind Homefeed and Search. Stanford CS grad, women's wrestling coach.",
+    "Melissa Lee is a software engineer at Pinterest who works on the infrastructure behind Homefeed, Search, Related Pins, and Notifications. Stanford CS grad, women's wrestling coach.",
   email: "melissa.f.lee02@gmail.com",
   ogImage: "/og.png",
   links: {
